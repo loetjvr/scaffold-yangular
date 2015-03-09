@@ -32,7 +32,8 @@ gulp.task('templates', function() {
       file.basename = '_' + file.basename.slice(1);
     }
   }))
-  .pipe($.replace(/scaffoldYangular/g, '<%= appname %>'))
+  .pipe($.if('*.js', $.replace(/scaffoldYangular/g, '<%= appname %>')))
+  .pipe($.if('*.html', $.replace(/scaffoldYangular/g, '<%= appname %>')))
   .pipe(gulp.dest('gen/templates/app'));
 });
 
