@@ -44,7 +44,7 @@ gulp.task('apptemplates', function() {
     'app/scripts/filters/_filter.js',
     'app/scripts/services/_constant.js',
     'app/scripts/services/_factory.js',
-    'app/scripts/services/service.js',
+    'app/scripts/services/_service.js',
   ])
   .pipe($.flatten())
   .pipe($.replace(/scaffoldYangular/g, '<%= appname %>'))
@@ -66,7 +66,7 @@ gulp.task('testtemplates', function() {
     'test/spec/filters/_filter.js',
     'test/spec/services/_constant.js',
     'test/spec/services/_factory.js',
-    'test/spec/services/service.js',
+    'test/spec/services/_service.js',
   ])
   .pipe($.flatten())
   .pipe($.replace(/scaffoldYangular/g, '<%= appname %>'))
