@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var mockGulpDest = require('mock-gulp-dest')(gulp);
 var chai = require('chai');
